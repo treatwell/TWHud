@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TWHud",
+        "repositoryURL": "https://github.com/treatwell/TWHud.git",
+        "state": {
+          "branch": null,
+          "revision": "720e10c1513542b8d4bab1963dc348474a278dcf",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

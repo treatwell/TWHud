@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3l4-uk-79P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DJ8-xW-seq">
+            <objects>
+                <viewController id="3l4-uk-79P" customClass="ViewController" customModule="TestuojuHUD2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LtV-Zn-0wN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPb-Nf-2ud">
+                                <rect key="frame" x="60" y="74" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OZK-0n-1UN"/>
+                                    <constraint firstAttribute="height" constant="40" id="bHV-HH-WJh"/>
+                                </constraints>
+                                <state key="normal" title="Show HUD"/>
+                                <connections>
+                                    <action selector="showHud" destination="3l4-uk-79P" eventType="touchUpInside" id="QMI-p5-APv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alj-2R-LVk">
+                                <rect key="frame" x="204" y="74" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FLg-KL-UJI"/>
+                                    <constraint firstAttribute="width" constant="150" id="ugJ-3R-pbh"/>
+                                </constraints>
+                                <state key="normal" title="Show HUD in view"/>
+                                <connections>
+                                    <action selector="showHudInView" destination="3l4-uk-79P" eventType="touchUpInside" id="osX-tg-wVG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZB6-Ci-OrC">
+                                <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                                <color key="backgroundColor" white="0.95736122999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XsC-BD-yn8"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This is a text field" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-6f-KZH">
+                                <rect key="frame" x="50" y="134" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="b1b-Wr-ckK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-Hl-gLm">
+                                <rect key="frame" x="157" y="178" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="g1M-JU-5Xk"/>
+                                    <constraint firstAttribute="height" constant="40" id="vve-IZ-ALS"/>
+                                </constraints>
+                                <state key="normal" title="Hide keyboard"/>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="3l4-uk-79P" eventType="touchUpInside" id="XIv-Uf-USe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nPb-Nf-2ud" firstAttribute="leading" secondItem="U2P-1W-VLe" secondAttribute="leading" constant="60" id="9fV-We-NZF"/>
+                            <constraint firstItem="U2P-1W-VLe" firstAttribute="trailing" secondItem="hpU-6f-KZH" secondAttribute="trailing" constant="50" id="Fa2-zn-2HF"/>
+                            <constraint firstItem="ZB6-Ci-OrC" firstAttribute="leading" secondItem="U2P-1W-VLe" secondAttribute="leading" id="HZz-XC-7zx"/>
+                            <constraint firstItem="Bb7-Hl-gLm" firstAttribute="centerX" secondItem="LtV-Zn-0wN" secondAttribute="centerX" id="MbU-hk-Z2P"/>
+                            <constraint firstAttribute="bottom" secondItem="ZB6-Ci-OrC" secondAttribute="bottom" id="TVK-zh-Rwo"/>
+                            <constraint firstItem="nPb-Nf-2ud" firstAttribute="top" secondItem="U2P-1W-VLe" secondAttribute="top" constant="30" id="W48-9D-ZcJ"/>
+                            <constraint firstItem="alj-2R-LVk" firstAttribute="centerY" secondItem="nPb-Nf-2ud" secondAttribute="centerY" id="YGU-Ib-cyB"/>
+                            <constraint firstItem="Bb7-Hl-gLm" firstAttribute="top" secondItem="hpU-6f-KZH" secondAttribute="bottom" constant="10" id="cnn-Fj-lrX"/>
+                            <constraint firstItem="U2P-1W-VLe" firstAttribute="trailing" secondItem="ZB6-Ci-OrC" secondAttribute="trailing" id="gKG-Xi-Us8"/>
+                            <constraint firstItem="hpU-6f-KZH" firstAttribute="leading" secondItem="U2P-1W-VLe" secondAttribute="leading" constant="50" id="iqI-LA-1Uz"/>
+                            <constraint firstItem="U2P-1W-VLe" firstAttribute="trailing" secondItem="alj-2R-LVk" secondAttribute="trailing" constant="60" id="oI8-97-eGs"/>
+                            <constraint firstItem="hpU-6f-KZH" firstAttribute="top" secondItem="nPb-Nf-2ud" secondAttribute="bottom" constant="20" id="pbC-uK-zZm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U2P-1W-VLe"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="ZB6-Ci-OrC" id="Cgp-Co-S0b"/>
+                        <outlet property="textField" destination="hpU-6f-KZH" id="hss-q9-5WG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oi-zV-x5R" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
