@@ -24,6 +24,13 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 
 <img width="825" alt="Add Package Dependency" src="https://user-images.githubusercontent.com/39797949/72062278-269b5a80-32e0-11ea-83bc-341739a44424.png">
 
+### Carthage
+
+Add the following entry to your Cartfile:
+```swift
+github "treatwell/TWHud"
+```
+
 ## Usage
 
 First, import `TWHud`
