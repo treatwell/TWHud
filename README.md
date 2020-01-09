@@ -75,7 +75,11 @@ After configuring your `TWHud` in `AppDelegate`, you can use it anywhere in you 
 TWHud.show()
 ```
 
-and dismiss it
+This will create HUD over all your UI
+
+![HUD over your UI](https://user-images.githubusercontent.com/39797949/72069054-f909dd80-32ee-11ea-9d27-e34291cfbb02.gif)
+
+Dismiss it using
 
 ```swift
 TWHud.dismiss()
@@ -95,7 +99,10 @@ let hud = TWHud.showIn(
 )  
 ```
 
-Then dismiss it 
+![HUD in custom view](https://user-images.githubusercontent.com/39797949/72069106-1f2f7d80-32ef-11ea-8340-b06fbca77875.gif)
+
+
+Dismiss it using
 
 ```swift
 hud.dismiss()
