@@ -27,7 +27,7 @@ final class TWHudTests: XCTestCase {
         XCTAssertEqual(configuration?.size, CGSize(width: 111, height: 111), "TWHud configuration mismatch")
         XCTAssertEqual(configuration?.fillUpTime, 0.6, "TWHud configuration mismatch")
         XCTAssertEqual(configuration?.waitTime, 0.2, "TWHud configuration mismatch")
-        XCTAssertEqual(configuration?.hudBackgorundColour, UIColor.brown, "TWHud configuration mismatch")
+        XCTAssertEqual(configuration?.hudBackgroundColour, UIColor.brown, "TWHud configuration mismatch")
         XCTAssertEqual(configuration?.containerBackgroundColour, .black, "TWHud configuration mismatch")
         XCTAssertEqual(
             configuration?.colours,

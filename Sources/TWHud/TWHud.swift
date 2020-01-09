@@ -206,7 +206,7 @@ public class TWHud: UIView {
         let hud = UIView(frame: CGRect(origin: .zero, size: configuration.size))
         hud.layer.cornerRadius = configuration.cornerRadius
         hud.layer.masksToBounds = true
-        hud.backgroundColor = configuration.hudBackgorundColour
+        hud.backgroundColor = configuration.hudBackgroundColour
         hud.alpha = 0.0
         hud.addSubview(self)
         
