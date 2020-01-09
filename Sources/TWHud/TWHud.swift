@@ -21,7 +21,7 @@ public class TWHud: UIView {
         let size: CGSize
         let fillUpTime: TimeInterval
         let waitTime: TimeInterval
-        let hudBackgorundColour: UIColor
+        let hudBackgroundColour: UIColor
         let containerBackgroundColour: UIColor
         let colours: [UIColor]
         
@@ -51,7 +51,7 @@ public class TWHud: UIView {
             self.size = size
             self.fillUpTime = fillUpTime
             self.waitTime = waitTime
-            self.hudBackgorundColour = hudBackgroundColour
+            self.hudBackgroundColour = hudBackgroundColour
             self.containerBackgroundColour = containerBackgroundColour
             self.colours = colours
         }
