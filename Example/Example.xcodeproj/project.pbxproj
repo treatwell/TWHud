@@ -12,7 +12,7 @@
 		70A3D95423C72D5800306AD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A3D95223C72D5800306AD8 /* Main.storyboard */; };
 		70A3D95623C72D5A00306AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A3D95523C72D5A00306AD8 /* Assets.xcassets */; };
 		70A3D95923C72D5A00306AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A3D95723C72D5A00306AD8 /* LaunchScreen.storyboard */; };
-		70C1D82F23C7300100584356 /* TWHud in Frameworks */ = {isa = PBXBuildFile; productRef = 70C1D82E23C7300100584356 /* TWHud */; };
+		B4B743F423C75FBF00C2FEB9 /* TWHud in Frameworks */ = {isa = PBXBuildFile; productRef = B4B743F323C75FBF00C2FEB9 /* TWHud */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +23,7 @@
 		70A3D95523C72D5A00306AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A3D95823C72D5A00306AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70A3D95A23C72D5A00306AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B743F123C75F7E00C2FEB9 /* TWHud */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TWHud; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C1D82F23C7300100584356 /* TWHud in Frameworks */,
+				B4B743F423C75FBF00C2FEB9 /* TWHud in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +43,7 @@
 			children = (
 				70A3D94B23C72D5800306AD8 /* Example */,
 				70A3D94A23C72D5800306AD8 /* Products */,
+				B4B743F123C75F7E00C2FEB9 /* TWHud */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +85,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				70C1D82E23C7300100584356 /* TWHud */,
+				B4B743F323C75FBF00C2FEB9 /* TWHud */,
 			);
 			productName = Example;
 			productReference = 70A3D94923C72D5800306AD8 /* Example.app */;
@@ -114,7 +116,6 @@
 			);
 			mainGroup = 70A3D94023C72D5800306AD8;
 			packageReferences = (
-				70C1D82D23C7300100584356 /* XCRemoteSwiftPackageReference "TWHud" */,
 			);
 			productRefGroup = 70A3D94A23C72D5800306AD8 /* Products */;
 			projectDirPath = "";
@@ -289,7 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X5394XCRFK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X5394XCRFK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,21 +344,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		70C1D82D23C7300100584356 /* XCRemoteSwiftPackageReference "TWHud" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/treatwell/TWHud.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		70C1D82E23C7300100584356 /* TWHud */ = {
+		B4B743F323C75FBF00C2FEB9 /* TWHud */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 70C1D82D23C7300100584356 /* XCRemoteSwiftPackageReference "TWHud" */;
 			productName = TWHud;
 		};
 /* End XCSwiftPackageProductDependency section */
