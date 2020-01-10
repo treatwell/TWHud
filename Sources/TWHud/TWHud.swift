@@ -19,6 +19,7 @@ public class TWHud: UIView {
         let maskImage: UIImage
         let cornerRadius: CGFloat
         let size: CGSize
+        let fillUpRect: CGRect
         let fillUpTime: TimeInterval
         let waitTime: TimeInterval
         let hudBackgroundColour: UIColor
@@ -31,6 +32,7 @@ public class TWHud: UIView {
          - Parameter maskImage: PNG image used as a mask
          - Parameter cornerRadius: Corner radius for HUD
          - Parameter size: Size of HUD
+         - Parameter fillUpRect: Rect of transparent area of the mask
          - Parameter fillUpTime: Fill up animation time
          - Parameter waitTime: Time to wait before next fill up
          - Parameter hudBackgorundColour: Colour of HUD
@@ -40,6 +42,7 @@ public class TWHud: UIView {
         public init(maskImage: UIImage,
              cornerRadius: CGFloat = 10.0,
              size: CGSize = CGSize(width: 100, height: 100),
+             fillUpRect: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100),
              fillUpTime: TimeInterval = 0.5,
              waitTime: TimeInterval = 0.1,
              hudBackgroundColour: UIColor = .white,
@@ -49,6 +52,7 @@ public class TWHud: UIView {
             self.maskImage = maskImage
             self.cornerRadius = cornerRadius
             self.size = size
+            self.fillUpRect = fillUpRect
             self.fillUpTime = fillUpTime
             self.waitTime = waitTime
             self.hudBackgroundColour = hudBackgroundColour
@@ -77,7 +81,7 @@ public class TWHud: UIView {
         super.init(frame: CGRect(origin: .zero, size: configuration.size))
         bgFillIdx = Int(arc4random()) % configuration.colours.count
         fillIdx = generateFillIdx()
-        fillOrigin = generateFillOrigin()
+        fillOrigin = randomPointOnBorder()
     }
     
     required init?(coder: NSCoder) {
@@ -326,12 +330,13 @@ public class TWHud: UIView {
         return fillIdx
     }
     
-    private func generateFillOrigin() -> CGPoint {
+    // Pick random point of [0, 0], [0.5, 0], [1, 0], [1, 0.5], [1, 1], [0.5, 1], [1, 0] and [0, 0.5]
+    private func randomPointOnBorder() -> CGPoint {
         let x: CGFloat = CGFloat(arc4random() % 3) / 2.0
         let y: CGFloat = CGFloat(arc4random() % 3) / 2.0
         
         if x == y && x == 0.5 {
-            return generateFillOrigin()
+            return randomPointOnBorder()
         } else {
             return CGPoint(x: x, y: y)
         }
@@ -359,9 +364,11 @@ public class TWHud: UIView {
             context?.setFillColor(components)
         }
         
-        let step = CGFloat(80.0 * fillY)
-        let x = 14 - step + 72 * fillOrigin.x
-        let y = 29 - step + 42 * fillOrigin.y
+        let fillRect = configuration.fillUpRect
+        
+        let step = CGFloat(max(fillRect.size.width, fillRect.size.height) * CGFloat(fillY))
+        let x = fillRect.origin.x - step + fillRect.height * fillOrigin.x
+        let y = fillRect.origin.y - step + fillRect.width * fillOrigin.y
         
         let rectangle = CGRect(x: x, y: y, width: step * 2, height: step * 2)
         context?.fillEllipse(in: rectangle)
@@ -372,7 +379,7 @@ public class TWHud: UIView {
             bgFillIdx = fillIdx
             fillIdx = generateFillIdx()
             timePassed = 0
-            fillOrigin = generateFillOrigin()
+            fillOrigin = randomPointOnBorder()
         }
     }
     

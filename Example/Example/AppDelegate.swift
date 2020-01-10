@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             TWHud.Configuration(
                 maskImage: UIImage(named: "LoaderLogoMask")!,
                 //cornerRadius: 10.0,
-                //size: CGSize(width: 200, height: 200),
+                size: CGSize(width: 100, height: 100),
+                fillUpRect: CGRect(x: 14, y: 29, width: 72, height: 42),
                 colours: [
                     UIColor(red: 214.0/255.0, green: 206.0/255.0, blue: 144.0/255.0, alpha: 1.0),
                     UIColor(red: 28.0/255.0, green: 173.0/255.0, blue: 186.0/255.0, alpha: 1.0),
@@ -52,4 +53,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
