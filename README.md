@@ -59,6 +59,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
          maskImage: UIImage(named: "LoaderLogoMask")!,
          cornerRadius: 5.0,
          size: CGSize(width: 140, height: 140),
+         fillUpRect: CGRect(x: 14, y: 29, width: 72, height: 42),
          fillUpTime: 0.6,
          waitTime: 0.2,
          hudBackgroundColour: .white,
