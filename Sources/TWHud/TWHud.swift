@@ -79,7 +79,7 @@ public class TWHud: UIView {
         self.configuration = configuration
         
         super.init(frame: CGRect(origin: .zero, size: configuration.size))
-        bgFillIdx = Int(arc4random()) % configuration.colours.count
+        bgFillIdx = Int.random(in: 0 ..< configuration.colours.count)
         fillIdx = generateFillIdx()
         fillOrigin = randomPointOnBorder()
     }
@@ -323,7 +323,7 @@ public class TWHud: UIView {
         var valid = false
         
         while !valid {
-            fillIdx = Int(arc4random()) % configuration.colours.count
+            fillIdx = Int.random(in: 0 ..< configuration.colours.count)
             valid = nextFillColourIndexIsValid(fillIdx, bgFillIdx)
         }
         
@@ -332,8 +332,8 @@ public class TWHud: UIView {
     
     // Pick random point of [0, 0], [0.5, 0], [1, 0], [1, 0.5], [1, 1], [0.5, 1], [1, 0] and [0, 0.5]
     private func randomPointOnBorder() -> CGPoint {
-        let x: CGFloat = CGFloat(arc4random() % 3) / 2.0
-        let y: CGFloat = CGFloat(arc4random() % 3) / 2.0
+        let x: CGFloat = CGFloat(Int.random(in: 0 ..< 3)) / 2.0
+        let y: CGFloat = CGFloat(Int.random(in: 0 ..< 3)) / 2.0
         
         if x == y && x == 0.5 {
             return randomPointOnBorder()
